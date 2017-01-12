@@ -9,7 +9,9 @@
     <meta name="keywords" content="andreo, sebastiani, developer, engineer, louisville, hadoop, .net, mvc, c#, sql, html, css, javascript" />
     <meta name="application-name" content="Andreo Sebastiani" />
 
-
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Site.css">
+    <link rel="stylesheet" href="mas.css">
 
     @Styles.Render("~/Content/commoncss")
 
@@ -26,8 +28,98 @@
 
     @Html.Action("NavBar", "NavBar")
 
-        @RenderBody()
+        <!-- Navigation -->
+<a id="menu-toggle" href="#" class="hidden-xs hidden-sm btn btn-default btn-lg toggle">
+    <i class="fa fa-bars"></i>
+    &nbsp; Menu
+</a>
 
+<nav class="hidden-xs hidden-sm" id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle">
+            <i class="fa fa-times" style="color: #fff;"></i>
+        </a>
+        <li class="sidebar-brand" style="color: #fff;">
+            Andreo Sebastiani
+        </li>
+        <li>
+            <a href="Index.Html">Home</a>
+        </li>
+        <li>
+            <a href="Resume.Html">Resume</a>
+        </li>
+        <li>
+            <a href="Contact.Html">Contact</a>
+        </li>
+
+    </ul>
+</nav>
+
+<!-- Header -->
+<header id="top" class="header">
+    <div class="text-vertical-center">
+        <h1>Andreo Sebastiani</h1>
+        <h3>Developer in Louisville, KY</h3>
+        <a class="scroll-down icon-arrow-left" href="#content">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </a>
+    </div>
+</header>
+
+<div id="toggle" class="hidden-lg hidden-md button_container"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
+<div id="overlay" class="overlay">
+    <nav class="hidden-lg hidden-md overlay-menu">
+        <ul>
+            <li><a href="Index.Html">Profile</a></li>
+            <li>
+                <a href="Resume.Html">Resumé</a>
+            </li>
+            <li>
+                <a href="https://github.com/andreosebastiani">
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:andreosebastiani@gmail.com">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                </a>
+            </li>            
+            <li>
+                <a href="https://www.linkedin.com/in/andreo-sebastiani-1908648b">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="container" id="content">
+    <div class="col-md-4 text-center">
+        <i class="fa fa-sitemap fa-3x"></i> <h4>Web Architecture</h4>
+        <p>
+            Built both internal facing applications and enterprise level applications from the ground up using some of the latest development technologies.
+            Worked with various design patterns including Domain Driven Design, Object-Relational Mapping, Repository and Unit of Work patterns, Command-Query Separation, and Inversion of Control to engineer scalable and stable applications.
+        </p>
+    </div>
+    <div class="col-md-4 text-center">
+        <i class="fa fa-code fa-3x"></i> <h4>Front-End Development</h4>
+        <p>
+            4+ years experience working with HTML, CSS, and JavaScript. Performance enthusiast utilizing MVC's bundling and minification as well as the JavaScript module pattern.
+        </p>
+    </div>
+    <div class="col-md-4 text-center">
+        <i class="fa fa-database fa-3x"></i> <h4>Database Design</h4>
+        <p>
+            In-depth experience in database modeling and design working in both relational and NoSql databases. 
+            This includes related experience with extraction transformation and load methods, data cleansing,
+            deduplication, and data flow modeling.
+        </p>
+    </div>
+</div>
 
     @Html.Action("Footer", "NavBar")
 
@@ -36,8 +128,13 @@
     @Scripts.Render("~/bundles/commonjavascript")
 
     @RenderSection("pagescripts", false)
-
-    @Html.Partial("~/Views/Shared/Layouts/_GoogleAnalytics.cshtml")
+    
+    <script>
+        $('#toggle').click(function () {
+            $(this).toggleClass('active');
+            $('#overlay').toggleClass('open');
+        });
+    </script>
 
     
     

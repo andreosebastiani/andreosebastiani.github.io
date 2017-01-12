@@ -1,4 +1,4 @@
-<script>
+
 $(function () {
     $("a[href^='http://'], a[href^='https://']").attr("target", "_blank");
     handleTag();
@@ -15,4 +15,3 @@ function handleTag() {
         el.siblings("div.tag-list-item").hide();
     }
 }
-</script>

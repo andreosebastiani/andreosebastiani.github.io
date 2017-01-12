@@ -1,0 +1,148 @@
+body { 
+    padding-top: 0px;
+      color: black;
+      background-color: #fff !important;
+      font-family: "Open Sans", sans-serif !important;
+}
+
+.site-content {
+    padding-top: 0;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.navbar { margin-bottom:0px !important; }
+.carousel-caption { margin-top:0px !important }
+
+
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    padding-top: 10px;
+    color: black;
+    height: 155px; /* .push must be the same height as .footer */
+}
+
+
+.widewrapper {
+  width:100%;
+  }
+
+.widewrapper > img {
+  width:100%;
+  height: 100%;
+}
+
+#profile {
+    padding-top: 40px;
+}
+
+#main-nav a.navbar-brand {
+	margin-top: -4px;
+}
+
+div#main-container {
+	background-color:#fff;
+	padding-top:20px;
+}
+
+.res-section h3 {
+    margin-top:0;
+}
+
+#res-skills dt, dd {
+    margin-bottom:10px;
+}
+
+#res-highlights ul li {
+    margin:10px inherit;
+}
+
+#res-emp .clients {
+    padding-left: 40px;
+}
+
+#res-emp .clients ul {
+    list-style-type: circle;
+}
+
+.employer {
+    margin-bottom:20px;
+}
+
+.employer:last-child {
+    margin-bottom:0;
+}
+
+.employer h4 {
+    margin-top:0;
+    margin-bottom:0;
+}
+
+.affix {
+    top:80px;
+}
+
+#res-nav-list li.active {
+    font-weight:bold;
+}
+
+#res-nav-list li.active.no-change {
+    font-weight:normal;
+}
+
+#res-nav-list li li {
+    display: none;
+}
+
+#res-nav-list li.active li {
+    display:block;
+    font-weight:normal;
+}
+
+#res-nav-list li.active li.active {
+    font-weight:bold;
+}
+
+@media (min-width: 992px) {
+    .affix {
+        width:150px;
+    }
+}
+@media (min-width: 1200px) {
+    .affix {
+        width:150px;
+    }
+}
+
+.blog-right {
+    border-left: solid 2px red;
+}
+
+.nodeJS {
+   color: red;
+}
+
+
+

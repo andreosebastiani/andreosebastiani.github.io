@@ -1,3 +1,4 @@
+<script>
 $('.carousel').carousel({ interval: false });
 
 /* affix the navbar after scroll below header */
@@ -108,3 +109,4 @@ function initialize() {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 /* end google maps */
+</script>

@@ -1,4 +1,4 @@
-<script>
+
 //refresh on dom load
 $(document).ready(function () {
     $(window).scrollTop(0);
@@ -42,4 +42,3 @@ $(document).ready(function () {
         }
     });
 });
-</script>

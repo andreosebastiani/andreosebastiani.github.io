@@ -1,4 +1,4 @@
-<script>
+
 $(function () {
     $("#res-nav").affix({ offset: { top: 90, bottom: 0 } });
 
@@ -16,4 +16,3 @@ $(function () {
         }, 500);
     });
 });
-</script>

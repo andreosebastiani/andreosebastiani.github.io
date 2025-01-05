@@ -1,324 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Andreo Sebastiani</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Web developer in Louisville, KY" />
-    <meta name="keywords" content="andreo, sebastiani, software, developer, engineer, louisville, chicago, .net, mvc, c#, sql, html, css, javascript" />
-    <meta name="application-name" content="Andreo Sebastiani" />
-    
-    <link rel="icon" href="images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Web developer in Louisville, KY"/>
+    <meta name="keywords" content="andreo, sebastiani, software, developer, engineer, louisville, chicago, .net, mvc, c#, sql, html, css, javascript"/>
+    <meta name="application-name" content="Andreo Sebastiani"/>
 
-    <!-- CSS -->
+    <link rel="icon" href="images/favicon.ico"/>
+
+    <!-- Combined CSS -->
     <link rel="stylesheet" href="css/site.css">
     <link rel="stylesheet" href="css/dre.css">
 
-    <!-- Bootstrap / Font Awesome -->
+    <!-- Bootstrap & Font Awesome (Bootstrap 3) -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- Additional inline styles (from resume.html) -->
     <style>
+        /* Additional style from resume.html */
         .res-section h5 {
             font-weight: bold;
         }
+
+        /* Example: set a fixed height for your hero to illustrate offsets */
+        .header {
+            min-height: 500px; /* Demo: ensure hero is tall enough */
+            display: table;
+            width: 100%;
+            background: url('images/Italy.jpg') no-repeat center center scroll;
+            background-size: cover;
+        }
+        .text-vertical-center {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .text-vertical-center h1 {
+            color: #fff;
+            font-size: 4.5em;
+            font-weight: 700;
+        }
+        .text-vertical-center h3 {
+            color: rgba(255,255,255,0.8);
+            font-size: 2.2rem;
+            font-weight: 400;
+            font-family: "Merriweather", serif;
+        }
+        .scroll-down {
+            position: absolute;
+            bottom: 45px;
+            left: 50%;
+            margin-left: -16px;
+            width: 34px;
+            height: 34px;
+            font-size: 34px;
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+        }
+        .scroll-down:hover {
+            color: #fff;
+        }
+
+        /* Optional: spacing around the resume container */
+        #resume-section {
+            margin-top: 40px;
+        }
+
+        /* Optional: fix affix width so nav doesn’t jump. (Because once affixed, it loses its container width) */
+        #res-nav.affix {
+            width: 150px; /* match the col-md-2 width or your preference */
+        }
     </style>
 </head>
+
 <body class="site-wrapper">
 
-    <!-- HERO HEADER (Hero Section at the Top) -->
+    <!-- HERO HEADER -->
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1>Andreo Sebastiani</h1>
             <h3>Software Engineer in Chicago, IL</h3>
-            <a class="scroll-down icon-arrow-left" href="#main-content">
+            <!-- Scroll-down arrow to jump to resume -->
+            <a class="scroll-down" href="#resume-section">
                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
             </a>
         </div>
     </header>
 
-    <!-- MAIN CONTENT SECTION -->
-    <!-- We’ll place the side nav and the resume/profile content here, under the hero. -->
-    <div id="main-content" class="container" style="padding-top:40px;">
+    <!-- RESUME SECTION -->
+    <section id="resume-section">
+      <div class="container">
         <div class="row">
+          
+          <!-- SIDE NAV (Sticky with affix) -->
+          <div class="col-md-2 hidden-xs hidden-sm">
+            <!-- data-offset-top: how far from top before it sticks
+                 data-offset-bottom: how far from bottom before it unsticks 
+                 Adjust these values as needed -->
+            <div id="res-nav"
+                 data-spy="affix"
+                 data-offset-top="500"
+                 data-offset-bottom="200">
+              <ul id="res-nav-list" class="nav">
+                <li><a href="#res-summary">Summary</a></li>
+                <li>
+                  <a href="#res-skills">Skills</a>
+                  <ul>
+                    <li><a href="#res-skills-lang">Languages</a></li>
+                    <li><a href="#res-skills-cloud">Cloud</a></li>
+                    <li><a href="#res-skills-data">Databases</a></li>
+                    <li><a href="#res-skills-method">Methodologies</a></li>
+                  </ul>
+                </li>
+                <li><a href="#res-highlights">Highlights</a></li>
+                <li>
+                  <a href="#res-emp">Employment</a>
+                  <ul>
+                    <li><a href="#res-emp-upfront">Upfront Healthcare</a></li>
+                    <li><a href="#res-emp-waystar">Waystar</a></li>
+                    <li><a href="#res-emp-hps">HPS</a></li>
+                    <li><a href="#res-emp-yum">Yum</a></li>
+                    <li><a href="#res-emp-appriss">Appriss</a></li>
+                  </ul>
+                </li>
+                <li><a href="#res-community">Community</a></li>
+                <li><a href="#res-edu">Education</a></li>
+                <li class="no-change small"><a href="#top">Back to top</a></li>
+              </ul>
+            </div>
+          </div>
 
-            <!-- SIDE NAV (from resume.html), pinned on the left for md+ screens -->
-            <div class="hidden-xs hidden-sm col-md-2">
-                <div id="res-nav" class="affix-top">
-                    <ul id="res-nav-list" class="nav">
-                        <li><a href="#res-summary">Summary</a></li>
-                        <li>
-                            <a href="#res-skills">Skills</a>
-                            <ul>
-                                <li><a href="#res-skills-lang">Languages</a></li>
-                                <li><a href="#res-skills-cloud">Cloud</a></li>
-                                <li><a href="#res-skills-data">Databases</a></li>
-                                <li><a href="#res-skills-method">Methodologies</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#res-highlights">Highlights</a></li>
-                        <li>
-                            <a href="#res-emp">Employment</a>
-                            <ul>
-                                <li><a href="#res-emp-upfront">Upfront Healthcare</a></li>
-                                <li><a href="#res-emp-waystar">Waystar</a></li>
-                                <li><a href="#res-emp-hps">HPS</a></li>
-                                <li><a href="#res-emp-yum">Yum</a></li>
-                                <li><a href="#res-emp-appriss">Appriss</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#res-community">Community</a></li>
-                        <li><a href="#res-edu">Education</a></li>
-                        <li class="no-change small"><a href="#top">Back to top</a></li>
-                    </ul>
+          <!-- MAIN CONTENT -->
+          <div class="col-md-10">
+
+            <!-- Profile / About from index.html (optional) -->
+            <div class="row text-center">
+              <div class="col-md-4">
+                <i class="fa fa-sitemap fa-3x"></i>
+                <h4>Web Architecture</h4>
+                <p>
+                  Built internal and enterprise-level applications from the ground up using the latest technologies
+                  and design patterns (DDD, Repository, Unit of Work, CQRS, etc.).
+                </p>
+              </div>
+              <div class="col-md-4">
+                <i class="fa fa-code fa-3x"></i>
+                <h4>Front-End Development</h4>
+                <p>
+                  10+ years of experience with HTML, CSS, and JavaScript. Performance enthusiast using minification
+                  and bundling, plus JS module patterns.
+                </p>
+              </div>
+              <div class="col-md-4">
+                <i class="fa fa-database fa-3x"></i>
+                <h4>Database Design</h4>
+                <p>
+                  In-depth experience in relational & NoSQL, including ETL, data cleansing, deduplication,
+                  and data flow modeling.
+                </p>
+              </div>
+            </div>
+            <hr/>
+
+            <!-- SUMMARY -->
+            <div id="res-summary" class="res-section">
+              <h4>Summary</h4>
+              <p>
+                Accomplished leader with over 10 years of experience in data engineering and software
+                development. Expertise in developing scalable data infrastructures and applying advanced analytics
+                to transform strategic business objectives into measurable outcomes. Proven track record as a
+                player-coach, and committed to leading high-performing teams and fostering a culture of innovation and
+                data-driven decision-making.
+              </p>
+            </div>
+            <hr/>
+
+            <!-- SKILLS -->
+            <div id="res-skills" class="res-section">
+              <h4>Skills</h4>
+              <dl class="dl-horizontal">
+                <dt id="res-skills-lang">Leadership &amp; Management</dt>
+                <dd>
+                  Proficient in aligning engineering objectives with product, strategy, and operations teams
+                  to promote cross-functional collaboration and ensure seamless integration of efforts.
+                </dd>
+
+                <dt id="res-skills-cloud">Azure Cloud</dt>
+                <dd>
+                  <span class="badge alert-success">App Services</span>
+                  <span class="badge alert-success">Functions</span>
+                  <span class="badge alert-success">Virtual Machines</span>
+                  <span class="badge alert-success">Service Bus</span>
+                  <span class="badge alert-success">Active Directory</span>
+                  <span class="badge alert-success">Key Vault</span>
+                </dd>
+
+                <dt id="res-skills-data">Data Storage &amp; Tools</dt>
+                <dd>
+                  <span class="badge alert-success">SQL Server 2022</span>
+                  <span class="badge alert-success">Cosmos DB</span>
+                  <span class="badge alert-success">Blob Storage</span>
+                  <span class="badge alert-success">EF Core 5</span>
+                  <span class="badge alert-success">Dapper</span>
+                  <span class="badge alert-warning">NHibernate</span>
+                  <span class="badge alert-warning">ADO.NET</span>
+                </dd>
+
+                <dt id="res-skills-method">Methodologies &amp; Practices</dt>
+                <dd>
+                  <span class="badge alert-success">Agile</span>
+                  <span class="badge alert-success">Git</span>
+                  <span class="badge alert-success">Domain Driven Design</span>
+                  <span class="badge alert-success">Command Query Separation</span>
+                  <span class="badge alert-success">Object-Oriented Design Patterns</span>
+                </dd>
+              </dl>
+            </div>
+            <hr/>
+
+            <!-- HIGHLIGHTS -->
+            <div id="res-highlights" class="res-section">
+              <h4>Highlights</h4>
+              <ul>
+                <li>Led engineering development and quality teams to build personalized patient engagement tech</li>
+                <li>Independently partnered with large health systems and EHR solutions to develop and maintain RESTful API integrations</li>
+                <li>Performed Agile project management duties (requirements, user stories, sprint planning, etc.)</li>
+              </ul>
+            </div>
+            <hr/>
+
+            <!-- EMPLOYMENT -->
+            <div id="res-emp" class="res-section">
+              <h4>Employment</h4>
+
+              <div id="res-emp-upfront" class="employer">
+                <div class="clearfix">
+                  <h5 class="pull-left">Director of Software Engineering (Oct 2020-Present)</h5>
+                  <h5 class="pull-right">Upfront Healthcare Services (Nov 2018 - Present)</h5>
                 </div>
+                <div>Senior Software Engineer (Nov 2018-Oct 2020)</div>
+                <br>
+                <div>
+                  <span class="badge alert-info">.NET Core 3.1+</span>
+                  <span class="badge alert-info">C# 8</span>
+                  <span class="badge alert-info">SQL Server 2022</span>
+                  <span class="badge alert-info">Azure</span>
+                  <span class="badge alert-info">Git</span>
+                </div>
+                <ul>
+                  <li>Led engineering dev and QA teams to build personalized patient engagement solutions</li>
+                  <li>Developed and maintained RESTful API integrations with EHR solutions</li>
+                  <li>Worked with engineering managers to continuously upgrade platforms and reduce tech debt</li>
+                  <li>Facilitated daily standups, sprint planning, retrospectives, and software releases</li>
+                </ul>
+              </div>
+              <hr />
+
+              <div id="res-emp-waystar" class="employer">
+                <div class="clearfix">
+                  <h5 class="pull-left">Application Engineering Manager (Aug 2018-Nov 2018)</h5>
+                  <h5 class="pull-right">Waystar (Aug 2014 - Present)</h5>
+                </div>
+                <div>Advanced Application Engineer (Jun 2017-Aug 2018)</div>
+                <div>.NET Engineer (Jun 2015-Mar 2017)</div>
+                <br>
+                <div>
+                  <span class="badge alert-info">.NET Framework 4.8+</span>
+                  <span class="badge alert-info">C# 6</span>
+                  <span class="badge alert-info">ASP.NET MVC 5</span>
+                  <span class="badge alert-info">SQL Server 2016</span>
+                  <span class="badge alert-info">NHibernate</span>
+                  <span class="badge alert-info">Dapper</span>
+                  <span class="badge alert-info">Git</span>
+                  <span class="badge alert-warning">Hadoop</span>
+                  <span class="badge alert-warning">Hive</span>
+                </div>
+                <ul>
+                  <li>Managed a team of developers and QA to build contract management applications</li>
+                  <li>Refactored using Domain Driven Design, Repository & Unit of Work, and other design patterns</li>
+                  <li>Analyzed business processes and modeled complex domains into Classes</li>
+                  <li>Built REST endpoints for cross-application data integration</li>
+                </ul>
+              </div>
+              <hr />
+
+              <div id="res-emp-hps" class="employer">
+                <div class="clearfix">
+                  <h5 class="pull-left">Developer Co-op</h5>
+                  <h5 class="pull-right">Heartland Payment Systems (May 2014-Aug 2014)</h5>
+                </div>
+                <div>
+                  <span class="badge alert-info">C#</span>
+                  <span class="badge alert-info">ASP.NET Web Forms</span>
+                  <span class="badge alert-info">SQL Server 2014</span>
+                </div>
+                <ul>
+                  <li>Developed and maintained multiple internal websites</li>
+                  <li>Optimized stored procedures and indexes to increase performance</li>
+                  <li>Enhanced UI with HTML5, CSS3, and JavaScript</li>
+                </ul>
+              </div>
+              <hr />
+
+              <div id="res-emp-yum" class="employer">
+                <div class="clearfix">
+                  <h5 class="pull-left">IT Intern</h5>
+                  <h5 class="pull-right">Yum Brands (Feb 2014-May 2014)</h5>
+                </div>
+                <ul>
+                  <li>Gathered requirements, wrote specs, tracked and reported project progress</li>
+                  <li>Established processes to increase efficiencies</li>
+                </ul>
+              </div>
+              <hr />
+
+              <div id="res-emp-appriss" class="employer">
+                <div class="clearfix">
+                  <h5 class="pull-left">Implementation and Systems Analyst</h5>
+                  <h5 class="pull-right">Appriss (June 2013-Jan 2014)</h5>
+                </div>
+                <ul>
+                  <li>Developed test plans and release notes for victim notification software</li>
+                  <li>Smoke tested production applications following deployments</li>
+                  <li>Worked closely with clients to ensure data accuracy</li>
+                </ul>
+              </div>
+            </div>
+            <hr/>
+
+            <!-- COMMUNITY -->
+            <div id="res-community" class="res-section">
+              <h4>Community Involvement</h4>
+              <ul>
+                <li>.NET Mentor at Code Louisville</li>
+              </ul>
+            </div>
+            <hr/>
+
+            <!-- EDUCATION -->
+            <div id="res-edu" class="res-section">
+              <h4>Education</h4>
+              <h5 class="pull-right">Aug 2016</h5>
+              <dl class="dl-horizontal">
+                <dt>University of Louisville</dt>
+                <dd>Bachelor of Business Administration, Computer Information Systems</dd>
+              </dl>
             </div>
 
-            <!-- MAIN COLUMN (Profile & Resume Content) -->
-            <div class="col-md-10">
-                
-                <!-- PROFILE / ABOUT SECTION (from index.html) -->
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <i class="fa fa-sitemap fa-3x"></i>
-                        <h4>Web Architecture</h4>
-                        <p>
-                            Built internal and enterprise-level applications from the ground up 
-                            using the latest development technologies. Worked with various design 
-                            patterns including Domain Driven Design, Repository/Unit of Work, 
-                            Command/Query Separation, and Inversion of Control.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <i class="fa fa-code fa-3x"></i>
-                        <h4>Front-End Development</h4>
-                        <p>
-                            Over 10 years of experience working with HTML, CSS, and JavaScript. 
-                            Performance enthusiast utilizing MVC bundling & minification as well 
-                            as the JavaScript module pattern.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <i class="fa fa-database fa-3x"></i>
-                        <h4>Database Design</h4>
-                        <p>
-                            In-depth experience in database modeling and design for both relational 
-                            and NoSql. This includes ETL methods, data cleansing, deduplication, 
-                            and data flow modeling.
-                        </p>
-                    </div>
-                </div>
-                <hr />
+          </div><!-- /.col-md-10 -->
 
-                <!-- RESUME CONTENT (from resume.html) -->
-                <!-- SUMMARY -->
-                <div id="res-summary" class="res-section">
-                    <h4>Summary</h4>
-                    <p>
-                        Accomplished leader with over 10 years of experience in data engineering 
-                        and software development. Expertise in developing scalable data infrastructures 
-                        and applying advanced analytics to transform strategic business objectives into 
-                        measurable outcomes. Proven track record as a player-coach, and committed to 
-                        leading high-performing teams and fostering a culture of innovation and 
-                        data-driven decision-making.
-                    </p>
-                </div>
-                <hr />
-
-                <!-- SKILLS -->
-                <div id="res-skills" class="res-section">
-                    <h4>Skills</h4>
-                    <dl class="dl-horizontal">
-                        <dt id="res-skills-lang">Leadership &amp; Management</dt>
-                        <dd>
-                            Proficient in aligning engineering objectives with product, strategy, 
-                            and operations teams to ensure seamless integration of team efforts.
-                        </dd>
-                        <dt id="res-skills-cloud">Azure Cloud</dt>
-                        <dd>
-                            <span class="badge alert-success">App Services</span>
-                            <span class="badge alert-success">Functions</span>
-                            <span class="badge alert-success">Virtual Machines</span>
-                            <span class="badge alert-success">Service Bus</span>
-                            <span class="badge alert-success">Active Directory</span>
-                            <span class="badge alert-success">Key Vault</span>
-                        </dd>
-                        <dt id="res-skills-data">Data Storage &amp; Tools</dt>
-                        <dd>
-                            <span class="badge alert-success">SQL Server 2022</span>
-                            <span class="badge alert-success">Cosmos DB</span>
-                            <span class="badge alert-success">Blob Storage</span>
-                            <span class="badge alert-success">EF Core 5</span>
-                            <span class="badge alert-success">Dapper</span>
-                            <span class="badge alert-warning">NHibernate</span>
-                            <span class="badge alert-warning">ADO.NET</span>
-                        </dd>
-                        <dt id="res-skills-method">Methodologies &amp; Practices</dt>
-                        <dd>
-                            <span class="badge alert-success">Agile</span>
-                            <span class="badge alert-success">Git</span>
-                            <span class="badge alert-success">Domain Driven Design</span>
-                            <span class="badge alert-success">Command Query Separation</span>
-                            <span class="badge alert-success">Object-Oriented Design Patterns</span>
-                        </dd>
-                    </dl>
-                </div>
-                <hr />
-
-                <!-- HIGHLIGHTS -->
-                <div id="res-highlights" class="res-section">
-                    <h4>Highlights</h4>
-                    <ul>
-                        <li>Led engineering development and quality teams to build personalized patient engagement and omni-channel communication technology</li>
-                        <li>Developed and maintained RESTful API integrations with large health systems and EHR solutions</li>
-                        <li>Performed Agile project management duties by gathering requirements, writing and prioritizing user stories, estimating tasks, and conducting sprint meetings</li>
-                    </ul>
-                </div>
-                <hr />
-
-                <!-- EMPLOYMENT -->
-                <div id="res-emp" class="res-section">
-                    <h4>Employment</h4>
-
-                    <div id="res-emp-upfront" class="employer">
-                        <div class="clearfix">
-                            <h5 class="pull-left">Director of Software Engineering (Oct 2020-Present)</h5>
-                            <h5 class="pull-right">Upfront Healthcare Services (Nov 2018 - Present)</h5>
-                        </div>
-                        <div>Senior Software Engineer (Nov 2018-Oct 2020)</div>
-                        <br>
-                        <div>
-                            <span class="badge alert-info">.NET Core 3.1+</span>
-                            <span class="badge alert-info">C# 8</span>
-                            <span class="badge alert-info">SQL Server 2022</span>
-                            <span class="badge alert-info">Azure</span>
-                            <span class="badge alert-info">Git</span>
-                        </div>
-                        <ul>
-                            <li>Led engineering dev and QA teams to build personalized patient engagement solutions</li>
-                            <li>Developed and maintained RESTful API integrations with EHR solutions</li>
-                            <li>Prioritized initiatives to reduce technical debt</li>
-                            <li>Facilitated daily standups, sprint planning, retrospectives, and software releases</li>
-                        </ul>
-                    </div>
-                    <hr />
-
-                    <div id="res-emp-waystar" class="employer">
-                        <div class="clearfix">
-                            <h5 class="pull-left">Application Engineering Manager (Aug 2018-Nov 2018)</h5>
-                            <h5 class="pull-right">Waystar (Aug 2014 - Present)</h5>
-                        </div>
-                        <div>Advanced Application Engineer (Jun 2017-Aug 2018)</div>
-                        <div>.NET Engineer (Jun 2015-Mar 2017)</div>
-                        <br>
-                        <div>
-                            <span class="badge alert-info">.NET Framework 4.8+</span>
-                            <span class="badge alert-info">C# 6</span>
-                            <span class="badge alert-info">ASP.NET MVC 5</span>
-                            <span class="badge alert-info">SQL Server 2016</span>
-                            <span class="badge alert-info">NHibernate</span>
-                            <span class="badge alert-info">Dapper</span>
-                            <span class="badge alert-info">Git</span>
-                            <span class="badge alert-warning">Hadoop</span>
-                            <span class="badge alert-warning">Hive</span>
-                        </div>
-                        <ul>
-                            <li>Managed a team of developers and QA to build contract management applications</li>
-                            <li>Refactored architecture using DDD, ORM, Repository & Unit of Work</li>
-                            <li>Modeled complex business domains into Classes</li>
-                            <li>Built REST endpoints for cross-app data integration</li>
-                        </ul>
-                    </div>
-                    <hr />
-
-                    <div id="res-emp-hps" class="employer">
-                        <div class="clearfix">
-                            <h5 class="pull-left">Developer Co-op</h5>
-                            <h5 class="pull-right">Heartland Payment Systems (May 2014-Aug 2014)</h5>
-                        </div>
-                        <div>
-                            <span class="badge alert-info">C#</span>
-                            <span class="badge alert-info">ASP.NET Web Forms</span>
-                            <span class="badge alert-info">SQL Server 2014</span>
-                        </div>
-                        <ul>
-                            <li>Developed and maintained multiple internal websites</li>
-                            <li>Optimized stored procedures and indexes</li>
-                            <li>Enhanced UI with HTML5, CSS3, and JavaScript</li>
-                        </ul>
-                    </div>
-                    <hr />
-
-                    <div id="res-emp-yum" class="employer">
-                        <div class="clearfix">
-                            <h5 class="pull-left">IT Intern</h5>
-                            <h5 class="pull-right">Yum Brands (Feb 2014-May 2014)</h5>
-                        </div>
-                        <ul>
-                            <li>Gathered requirements, wrote specifications, tracked and reported progress</li>
-                            <li>Established processes to increase efficiencies</li>
-                        </ul>
-                    </div>
-                    <hr />
-
-                    <div id="res-emp-appriss" class="employer">
-                        <div class="clearfix">
-                            <h5 class="pull-left">Implementation and Systems Analyst</h5>
-                            <h5 class="pull-right">Appriss (June 2013-Jan 2014)</h5>
-                        </div>
-                        <ul>
-                            <li>Developed test plans and release notes for victim notification software</li>
-                            <li>Smoke tested production apps following deployments</li>
-                            <li>Ensured data accuracy with clients</li>
-                        </ul>
-                    </div>
-                </div>
-                <hr />
-
-                <!-- COMMUNITY -->
-                <div id="res-community" class="res-section">
-                    <h4>Community Involvement</h4>
-                    <ul>
-                        <li>.NET Mentor at Code Louisville</li>
-                    </ul>
-                </div>
-                <hr />
-
-                <!-- EDUCATION -->
-                <div id="res-edu" class="res-section">
-                    <h4>Education</h4>
-                    <h5 class="pull-right">Aug 2016</h5>
-                    <dl class="dl-horizontal">
-                        <dt>University of Louisville</dt>
-                        <dd>Bachelor of Business Administration, Computer Information Systems</dd>
-                    </dl>
-                </div>
-
-            </div> <!-- /.col-md-10 -->
-
-        </div> <!-- /.row -->
-    </div> <!-- /#main-content.container -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section>
 
     <!-- FOOTER -->
     <div class="container">
-        <hr />
-        <div class="footer text-center">
-            &copy; 2014 - 2025 Andreo Sebastiani
-        </div>
+      <hr />
+      <div class="footer text-center">
+          &copy; 2014 - 2025 Andreo Sebastiani
+      </div>
     </div>
 
-    <!-- JS -->
+    <!-- JS: jQuery + Bootstrap (for affix) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- Original JS (optional if still relevant) -->
+    <!-- Additional scripts if needed -->
     <script src="js/site.js"></script>
     <script src="js/dre.js"></script>
     <script src="js/nav-scroll.js"></script>
     <script src="js/waypoints.min.js"></script>
     <script src="js/resume.js"></script>
+
+    <!-- Optional: Easing plugin if you’re using it -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 </body>
 </html>

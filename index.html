@@ -6,10 +6,28 @@
   <title>hello world</title>
   <meta name="keywords" content="andreo, sebastiani, andreo sebastiani, dre sebastiani, andreosebastiani.com" />
   <link href="images/favicon.ico" rel="icon">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let seconds = 5;
+      const countdown = document.getElementById("countdown");
+      
+      countdown.textContent = seconds;
+      
+      const timer = setInterval(() => {
+        countdown.textContent = --seconds;
+        if (seconds <= 0) {
+          clearInterval(timer);
+          location.href = "https://andreosebastiani.com";
+        }
+      }, 1000);
+    });
+  </script>
+
 </head>
 <body>
   <code>
-    <a href="https://andreosebastiani.com">https://andreosebastiani.com</a>.
+    Redirecting to andreosebastiani.com in <span id="countdown"></span> seconds...</p>
   </code>
 </body>
 </html>
